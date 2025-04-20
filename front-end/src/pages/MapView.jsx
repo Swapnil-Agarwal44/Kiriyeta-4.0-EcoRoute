@@ -78,7 +78,7 @@ import React, { useState, useEffect } from "react";
         if (!userLocation || !destination) return;
   
         try {
-          const apiKey = "5b3ce3597851110001cf6248bd564e30b9bf4e38a539818468ff6167";
+          const apiKey = process.env.open_source_api;
           const response = await axios.get("https://api.openrouteservice.org/v2/directions/driving-car", {
             params: {
               api_key: apiKey,
